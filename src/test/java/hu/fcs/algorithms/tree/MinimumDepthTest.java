@@ -3,18 +3,19 @@ package hu.fcs.algorithms.tree;
 import org.junit.jupiter.api.Test;
 
 import static hu.fcs.algorithms.tree.BinaryTree.bt;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class MinimumDepthTest {
     @Test
     public void testMinimumdepth() {
-        assertEquals(MinimumDepth.of(null), 0);
-        assertEquals(MinimumDepth.of(bt()), 1);
-        assertEquals(MinimumDepth.of(bt(bt())), 2);
-        assertEquals(MinimumDepth.of(bt(null, bt())), 2);
-        assertEquals(MinimumDepth.of(bt(bt(), bt())), 2);
-        assertEquals(MinimumDepth.of(bt(bt(bt()))), 3);
-        assertEquals(MinimumDepth.of(bt(bt(bt()), bt())), 2);
+        assertThat(MinimumDepth.of(null), is(0));
+        assertThat(MinimumDepth.of(bt()), is(1));
+        assertThat(MinimumDepth.of(bt(bt())), is(2));
+        assertThat(MinimumDepth.of(bt(null, bt())), is(2));
+        assertThat(MinimumDepth.of(bt(bt(), bt())), is(2));
+        assertThat(MinimumDepth.of(bt(bt(bt()))), is(3));
+        assertThat(MinimumDepth.of(bt(bt(bt()), bt())), is(2));
     }
 
 
