@@ -5,7 +5,7 @@ public class BinaryTree<T> {
         return new BinaryTree<>(null, null, null);
     }
 
-    public static <T> BinaryTree<T> bt(T value) {
+    public static <T> BinaryTree<T> btv(T value) {
         return new BinaryTree<>(value, null, null);
     }
 
@@ -13,8 +13,16 @@ public class BinaryTree<T> {
         return new BinaryTree<>(null, a, null);
     }
 
+    public static <T> BinaryTree<T> btv(T value, BinaryTree<T> a) {
+        return new BinaryTree<>(value, a, null);
+    }
+
     public static <T> BinaryTree<T> bt(BinaryTree<T> a, BinaryTree<T> b) {
         return new BinaryTree<>(null, a, b);
+    }
+
+    public static <T> BinaryTree<T> btv(T value, BinaryTree<T> a, BinaryTree<T> b) {
+        return new BinaryTree<>(value, a, b);
     }
 
     private BinaryTree<T> a, b;
