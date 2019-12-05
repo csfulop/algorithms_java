@@ -28,6 +28,4 @@ public class MinimumDepthTest {
         assertThat(f.apply(bt(bt(bt()))), is(3));
         assertThat(f.apply(bt(bt(bt()), bt())), is(2));
     }
-
-
 }
